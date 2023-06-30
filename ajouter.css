@@ -1,0 +1,222 @@
+
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+html{
+    font-family: 'PT Serif', serif;
+}
+
+.container{
+    
+    margin-top: 7rem;
+}
+
+
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #9b22ea,
+        #bf23f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+form{
+    height: auto;
+    width: 430px;
+    background-color: rgba(24, 22, 22, 0.795);
+    /* position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%; */
+    border-radius: 10px;
+    /* //backdrop-filter: blur(10px); */
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    box-sizing: border-box;
+    
+    margin: 0% auto;
+    border: #f09819 1px solid;
+    
+}
+form{
+    margin-top: 30px;
+}
+
+form *{
+    font-family: 'PT Serif', serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+}
+form h3 span{
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    color: #e5e5e5;
+}
+label{
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #e5e5e5 ;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: black;
+}
+.button{
+    margin-top: 30px;
+    width: 30px;
+    background-color: orange;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.br_input1{
+    border-top: 30px solid orange;
+}
+
+.back_btn{
+    color: orange;
+    text-decoration: 0;
+    display: flex;
+    align-items: center;
+}
+.back_btn img{
+    height: 16px;
+    background-color: #f09819;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+button{
+    width: fit-content;
+    margin-bottom: 20px;
+    background: #FFA500;
+    padding: 5px 20px;
+    color: #fff;
+    display: flex;
+    border-radius: 6px;
+    align-items: center;
+    text-align: 0;
+    text-decoration: 0;
+
+}
+input:focus{
+    border: 1px solid orange; 
+
+}
+h4{
+    margin: 10px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.erreur_message{
+    color: red;
+}
+
+/* ----------------dropdown------------------ */
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
