@@ -33,13 +33,13 @@
                 $img_des = "uploadImage/".$img_name;
                 move_uploaded_file($img_loc, $img_des);
                 // matricule générator 
-                $matcle = $_POST['promotion'].$_POST['matricule'];
+                
                 // Extration des information envoyé dans la des variables par la méthode post
                 extract($_POST);
                 // vérifier que tous les champs on été remplit 
                 if(isset($matcle) && isset($nom) && isset($prenom) && isset($age)&& isset($date_naissance)&& isset($email)&& isset($tel)&& isset($img_des)&& isset($promotion)&& isset($annee_certification)){
                     // réquête de modification 
-                    $req = mysqli_query($con, "UPDATE `apprenant` SET `matricule`='$matcle',`nom`='$nom',`prenom`='$prenom',`age`='$age',`date_naissance`='$date_naissance',`email`='$email',`tel`='$tel',`photo`='$img_des',`promotion`='$promotion',`annee_certification`='$annee_certification' WHERE `id`='$id'");
+                    $req = mysqli_query($con, "UPDATE `apprenant` SET `nom`='$nom',`prenom`='$prenom',`age`='$age',`date_naissance`='$date_naissance',`email`='$email',`tel`='$tel',`promotion`='$promotion',`annee_certification`='$annee_certification' WHERE `id`='$id'");
                     if($req){
                         // si la requete a été effectuée avec succès , on fait une redirection 
                         header("location: home.php");
@@ -76,7 +76,7 @@
             </div>
     
             <label >Matricule</label>
-            <input class="br_input" type="text" placeholder="Numéro Matricule" name="matricule" >
+            <input class="br_input" type="text" placeholder="Numéro Matricule" name="matricule" value="<?=$row['matricule']?>" readonly>
     
             <label >Nom</label>
             <input class="br_input" type="text" placeholder="Nom" name="nom" value="<?=$row['nom']?>">
@@ -121,7 +121,7 @@
             <label >Année</label>
             <input  type="number" name="annee_certification" placeholder="Année de certification" value="<?=$row['annee_certification']?>" >
 
-            <input class="button" type="submit" value="Modifier" name="button">
+            <input class="button_btn" type="submit" value="Modifier" name="button">
         </form>
                     
         <!-- js link  -->

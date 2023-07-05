@@ -19,7 +19,7 @@
         include "header.php";
     ?>
     </div>
-    <img src="img/home.png" alt="" width="100%" height="100%">
+    <h1 class="welcome">Bienvenue sur la page d'accueil <span>ODK</span></h1>
    
 </body>
 </html>

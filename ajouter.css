@@ -106,9 +106,10 @@ input{
 ::placeholder{
     color: black;
 }
-.button{
+
+.button_btn{
     margin-top: 30px;
-    width: 30px;
+    width: 100%;
     background-color: orange;
     color: #080710;
     padding: 15px 0;
@@ -157,6 +158,9 @@ h4{
 }
 .erreur_message{
     color: red;
+}
+input{
+    color:#080710;
 }
 
 /* ----------------dropdown------------------ */

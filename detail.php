@@ -71,10 +71,6 @@
                 <p>Téléphone: <?=$row['tel']?></p>
                 <p>Promotion: <?=$row['promotion']?></p>
                 <p>Anne Certification: <?=$row['annee_certification']?></p>
-                <div class="dbtn">
-                    <a href="modifier.php?id=<?=$row['id']?>" class="Btn_add"><img src="img/EDIT.png"></a>
-                    <a href="supprimer.php?id=<?=$row['id']?>" class="Btn_add"><img src="delete.png"></a>
-                </div>
             </div>
         </section>
         <!-- FIN DE SECTION A PROPOS-->
